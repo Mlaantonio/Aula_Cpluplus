@@ -10,10 +10,14 @@ int main (void){
 	printf("Digite a quantidade parcelas \n");
 	scanf("%d", &parcelas);
 	entrada = compra * 0.20;
-	parcela = (compra - entrada) / parcelas--;
+	parcelas = parcelas - 1;
+	parcela = compra - entrada;
+	parcela = parcela / parcelas;
 	printf("\n");
 	printf("Valor da compra %.2f.\n", compra);
-	printf("Valor da entrada %.2f.\n", entrada);
-	printf("Valor das parcelas %.2f.\n", parcela);
-	printf("Quantidade de parcelas %d.\n", parcelas);	
+	printf("Valor da entrada (20 porcento) %.2f.\n", entrada);
+	printf("Valor das parcelas %.2f", parcela);
+	printf(" X ");
+	printf("%d", parcelas);
+	printf(" parcelas \n");
 	}
